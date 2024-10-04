@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -168,4 +168,71 @@ main {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 750px) {
+  main {
+  flex-direction: column;
+  margin: 0 6rem;;
+  }
+
+  .player {
+    flex: 30%;
+    height: 30%;
+    padding: 9rem 2rem;
+  }
+
+  .btn--new {
+    top: 1rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .score {
+    font-size: 4rem;
+  }
+
+  .current {
+    width: 25%;
+    padding: .5rem;
+  }
+
+  .current-label {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .current-score {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+  .btn--roll {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    max-width: 10rem;
+  }
+
+  .btn--hold {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 80%;
+    right: 1rem;
+    max-width: 10rem;
+  }
+
+  .dice {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 10rem;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  }
 }
