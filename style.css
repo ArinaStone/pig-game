@@ -132,11 +132,23 @@ main {
 .btn--new {
   top: 4rem;
 }
+
+.btn--new::after {
+  content: 'NEW GAME';
+}
 .btn--roll {
   top: 39.3rem;
 }
+
+.btn--roll::after {
+  content: 'ROLL DICE';
+}
 .btn--hold {
   top: 46.1rem;
+}
+
+.btn--hold::after {
+  content: 'HOLD';
 }
 
 .btn:active {
@@ -179,7 +191,7 @@ main {
   .player {
     flex: 30%;
     height: 30%;
-    padding: 9rem 2rem;
+    padding: 8rem 2rem;
   }
 
   .btn--new {
@@ -192,10 +204,12 @@ main {
 
   .score {
     font-size: 4rem;
+    margin-bottom: 1rem;
   }
 
   .current {
-    width: 25%;
+    min-width: 10rem;
+    width: 35%;
     padding: .5rem;
   }
 
@@ -211,22 +225,34 @@ main {
 
   .btn {
     font-size: 1.3rem;
+    max-width: 10rem;
+    min-width: 7rem;
   }
+
+  .btn--new::after {
+    display: none;
+  }
+
   .btn--roll {
     top: 50%;
     transform: translateY(-50%);
     left: 1rem;
-    max-width: 10rem;
+  }
+
+  .btn--roll::after {
+    display: none;
   }
 
   .btn--hold {
     top: 50%;
     transform: translateY(-50%);
-    left: 80%;
+    left: 75%;
     right: 1rem;
-    max-width: 10rem;
   }
 
+  .btn--hold::after {
+    display: none;
+  }
   .dice {
     position: absolute;
     left: 50%;
@@ -234,5 +260,11 @@ main {
     transform: translate(-50%, -50%);
     height: 10rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media (max-width: 420px) {
+  main {
+    margin: 0 2rem;
   }
 }
